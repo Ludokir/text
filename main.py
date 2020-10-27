@@ -1,6 +1,6 @@
 import pygame
 
-W, H = 800, 600 
+W, H = 800, 600
 RED = (255, 0, 0)
 BLUE = (0, 0, 255)
 YELLOW = (255, 255, 0)
@@ -31,7 +31,6 @@ while run:
             run = False
         elif e.type == pygame.K_ESCAPE:
             run = False
-    
     screen.blit(bg, bg_rect)
     screen.blit(sq, sq_rect)
     screen.blit(font_render, font_rect)
