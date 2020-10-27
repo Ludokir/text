@@ -30,8 +30,9 @@ while run:
     for e in pygame.event.get():
         if e.type == pygame.QUIT:
             run = False
-        elif e.type == pygame.K_ESCAPE:
-            run = False
+        elif e.type == pygame.KEYDOWN:
+            if e.key == pygame.K_ESCAPE:
+                run = False
 
     if start == 1:
         sq_rect.move_ip(10, 0)
