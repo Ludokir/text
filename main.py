@@ -35,26 +35,26 @@ while run:
                 run = False
 
     if start == 1:
-        sq_rect.move_ip(10, 0)
+        sq_rect.move_ip(1, 0)
         if sq_rect.x >= 700:
             start = 0
     if start == 0:
-        sq_rect.move_ip(0, -10)
+        sq_rect.move_ip(0, -1)
         if sq_rect.y <= 50:
             start = 2
     if start == 2:
-        sq_rect.move_ip(-10, 0)
+        sq_rect.move_ip(-1, 0)
         if sq_rect.x <= 100:
             start = 3
     if start == 3:
-        sq_rect.move_ip(0, 10)
+        sq_rect.move_ip(0, 1)
         if sq_rect.y >= 200:
             start = 4
     if start == 4:
-        sq_rect.move_ip(10, 0)
+        sq_rect.move_ip(1, 0)
         if sq_rect.x > 700:
             start = 1
-    pygame.time.wait(100)
+    pygame.time.wait(1)
     screen.blit(bg, bg_rect)
     screen.blit(sq, sq_rect)
     screen.blit(font_render, font_rect)
