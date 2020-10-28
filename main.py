@@ -17,13 +17,16 @@ font1 = pygame.font.SysFont('Arial', 20, True, False)
 font_render = font.render('Всем привет', True, WHITE)
 font_render1 = font1.render('задание на урок', True, YELLOW)
 font_rect = font_render.get_rect(center=(400, 300))
-font_rect1 = font_render1.get_rect(center=(W // 2, H // 2 + 30))
+font_rect1 = font_render1.get_rect(center=(W // 2, H // 2 + 50))
 
 sq = pygame.Surface((50, 50))
 sq_rect = sq.get_rect(center=(W // 2, H // 2 - 50))
 
 bg = pygame.Surface((W, H))
 bg_rect = bg.get_rect(topleft=(0, 0))
+
+sq.fill(RED)
+bg.fill(BLUE)
 
 run = True
 while run:
@@ -59,6 +62,4 @@ while run:
     screen.blit(sq, sq_rect)
     screen.blit(font_render, font_rect)
     screen.blit(font_render1, font_rect1)
-    sq.fill(RED)
-    bg.fill(BLUE)
     pygame.display.update()
